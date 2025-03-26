@@ -1,0 +1,78 @@
+.upload-course {
+  margin-top: 20px;
+  max-width: 700px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.upload-card {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-card h4 {
+  margin-bottom: 15px;
+}
+
+.lecture-list {
+  margin-top: 10px;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.lecture-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lecture-list li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lecture-list li:last-child {
+  border-bottom: none;
+}
+.btn-orange {
+  background-color: #ff9800; /* Bright orange */
+  border-color: #e68900;
+  color: white;
+  margin: 20px;
+}
+
+.btn-orange:hover {
+  background-color: #e68900; /* Darker orange */
+  border-color: #cc7700;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .upload-course {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .upload-card {
+    padding: 10px;
+  }
+  .btn-orange {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-course {
+    padding: 5px;
+  }
+  .upload-card {
+    padding: 8px;
+  }
+  .lecture-list {
+    padding: 5px;
+  }
+  .lecture-list li {
+    padding: 3px;
+  }
+}

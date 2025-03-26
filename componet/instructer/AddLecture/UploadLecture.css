@@ -1,0 +1,126 @@
+/* Mobile First Design */
+.upload-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .upload-loader span {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+  
+  .upload-loader span:nth-child(1) {
+    animation-delay: -0.3s;
+  }
+  
+  .upload-loader span:nth-child(2) {
+    animation-delay: -0.15s;
+  }
+  
+  .upload-loader span:nth-child(3) {
+    animation-delay: 0s;
+  }
+  
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.3;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .fade-out {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+  }
+  
+  .fade-out.hidden {
+    opacity: 0;
+  }
+  
+  .success-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    background-color: #28a745;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #218838;
+    box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.6);
+    animation: fadeInScale 0.5s ease-in-out, pulse 1.5s infinite;
+  }
+  
+  /* Smooth fade-in and scale effect */
+  @keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Pulse effect */
+  @keyframes pulse {
+    0% { box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.6); }
+    50% { box-shadow: 0px 0px 10px rgba(40, 167, 69, 1); }
+    100% { box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.6); }
+  }
+  
+  /* Mobile Screens (Default) */
+  .container {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* Tablets */
+  @media (min-width: 768px) {
+    .success-message {
+      font-size: 20px;
+      padding: 12px;
+    }
+  
+    .upload-loader span {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+    }
+  
+    button {
+      font-size: 18px;
+    }
+  }
+  
+  /* Laptops & Desktops */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+  
+    .success-message {
+      font-size: 24px;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 20px;
+    }
+  }
+  

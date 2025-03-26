@@ -1,0 +1,556 @@
+/* WatchLecture.css */
+.watch-lecture-container {
+  background-color: transparent;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+.back_btn_container {
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+
+.back_btn_container button {
+  background-color: #4a4ce4;
+  color: #fff; /* Changed to white for better contrast */
+  border: none;
+  font-weight: 600; /* Made slightly bolder */
+  padding: 8px 12px;
+  transition: background-color 0.2s;
+}
+
+.back_btn_container button:hover {
+  background-color: #3a3cd4; /* Slightly darker on hover */
+  color: #fff; /* Keep white text */
+}
+
+/* Video Player Section */
+.video-section {
+  margin-bottom: 20px;
+}
+
+.video-card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 59.25%; /* 16:9 Aspect Ratio */
+  width: 100%;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom video controls - YouTube style */
+video::-webkit-media-controls-panel {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+video::-webkit-media-controls-play-button {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.progress-container {
+  margin: 15px 0;
+}
+
+/* Enhanced progress bar with better color gradient */
+.progress-bar {
+  height: 4px;
+  border-radius: 2px;
+  transition: height 0.15s;
+  background-size: 400% 400%;
+  background-image: linear-gradient(to right, #e83e00, #d64e19, #ec1e1e, #f2091c);
+  animation: progressAnimation 3s ease infinite;
+}
+
+@keyframes progressAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.progress-container:hover .progress-bar {
+  height: 6px;
+}
+
+/* Fix for text visibility in progress bar */
+.progress-bar {
+  position: relative;
+  overflow: visible !important;
+}
+
+.progress-bar-label {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 12px;
+  color: #333; /* Darker text */
+  background-color: rgba(255, 255, 255, 0.9); /* More opaque */
+  padding: 2px 5px;
+  border-radius: 2px;
+  font-weight: 500; /* Slightly bolder */
+  pointer-events: none;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #030303;
+  margin: 12px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #606060;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  white-space: pre-line;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.button-group button {
+  transition: all 0.2s;
+  border-radius: 18px;
+  padding: 6px 16px;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #eaeaea; /* Slightly darker background */
+  color: #333; /* Darker text color for better readability */
+}
+
+/* Enhanced button hover effects */
+.button-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #d0d0d0; /* Darker on hover */
+  color: #000; /* Black text on hover for maximum contrast */
+}
+
+/* Bookmark Styling with enhanced colors */
+.bookmarks-card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.bookmarks-card .card-body h5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #ece4e4;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.bookmarks-card .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 12px 15px;
+  color: rgb(245, 237, 237);
+  transition: background-color 0.15s;
+}
+
+  .bookmarks-card .list-group-item:hover {
+
+}
+
+.bookmarks-card .list-group-item:first-child {
+  border-top: none; 
+}
+
+.bookmarks-card .list-group-item button {
+  border-radius: 18px;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Fixed button color contrast for better text visibility */
+.bookmarks-card .list-group-item button.btn-outline-primary {
+  color: #ffffff;
+  border-color: #000000;
+  font-size: larger;
+  width: 90%;
+  background-color: rgb(185, 77, 35); /* Explicitly set */
+}
+
+.bookmarks-card .list-group-item button.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #065fd4;
+}
+
+.bookmarks-card .list-group-item button.btn-outline-danger {
+  color: #fbfbfb;font-size: larger;
+  width: 90%;
+  border-color: #e5e2e2;
+  background-color: rgb(62, 159, 208); /* Explicitly set */
+}
+
+.bookmarks-card .list-group-item button.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+/* Comments Section with enhanced colors */
+.comments-card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.comments-card .card-body h5 {
+  font-weight: 600;
+  color: #efe9e9;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.comments-card .list-group {
+  border-radius: 0;
+}
+
+.comments-card .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 12px 15px;
+  color: #030303;
+  font-size: 14px;
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.comment-form input {
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 8px 16px;
+  transition: border-color 0.2s;
+}
+
+.comment-form input:focus {
+  border-color: #065fd4;
+  box-shadow: none;
+}
+
+.comment-btn {
+  background-color: #065fd4; /* Solid background */
+  border: none;
+  border-radius: 18px;
+  font-weight: 600; /* Made slightly bolder */
+  font-size: 14px;
+  padding: 6px 16px;
+  transition: all 0.2s;
+  color: #fff; /* White text with solid background */
+}
+
+.comment-btn:hover,
+.comment-btn:focus {
+  background-color: #0356c3; /* Darker solid background on hover */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(6, 95, 212, 0.3);
+}
+
+/* Upcoming Lectures Sidebar with enhanced gradient */
+.upcoming-lectures {
+  padding: 0 10px;
+  background-color: rgb(162, 162, 209);
+}
+
+.upcoming-lectures h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #030303;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.upcoming-lectures .list-group {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.lecture-item {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px;
+  font-size: larger;
+  transition: background-color 0.2s;
+}
+
+.lecture-item:last-child {
+  border-bottom: none;
+}
+
+.lecture-item:hover {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.lecture-item strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #030303;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Enhanced button with better text contrast */
+.lecture-item button {
+  background-color: #065fd4; /* Solid background color */
+  border: none;
+  border-radius: 18px;
+  font-weight: 600; /* Made slightly bolder */
+  font-size: 14px;
+  transition: all 0.2s;
+  color: #fff; /* White text with solid background */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Add text shadow for better visibility */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.lecture-item button:hover,
+.lecture-item button:focus {
+  background-color: #0356c3; /* Darker solid background on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(6, 95, 212, 0.3);
+}
+
+/* Enhanced badge with better readability */
+.lecture-item .badge {
+  background: #23a53c; /* Solid color instead of gradient for text clarity */
+  padding: 4px 6px;
+  font-weight: 600; /* Made slightly bolder */
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(43, 166, 64, 0.3);
+  color: #fff; /* White text with solid background */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Enhanced text shadow */
+}
+
+/* Progress bar in lecture items with subtle animation */
+.lecture-item .progress {
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.lecture-item .progress-bar {
+  background-image: linear-gradient(to right, #23a53c, #2ba640, #36c94c, #44e75b);
+  animation: progressPulse 2s infinite;
+}
+
+@keyframes progressPulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Modals with enhanced styling */
+.modal-header {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f0f0f0; /* Slightly darker background */
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #030303;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body textarea {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  resize: vertical;
+}
+
+.modal-body textarea:focus {
+  border-color: #065fd4;
+  box-shadow: 0 0 0 2px rgba(6, 95, 212, 0.2);
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+}
+
+.modal-footer button {
+  border-radius: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 16px;
+}
+
+.modal-footer button.btn-secondary {
+  color: #606060; /* Appropriate color for secondary buttons */
+  background-color: #f1f1f1; /* Solid light background */
+  border: 1px solid #d9d9d9;
+}
+
+.modal-footer button.btn-secondary:hover {
+  background-color: #e5e5e5;
+  color: #030303;
+}
+
+.modal-footer button.btn-primary {
+  background-color: #065fd4; /* Solid background color */
+  border: none;
+  box-shadow: 0 1px 3px rgba(6, 95, 212, 0.3);
+  color: #fff; /* White text with solid background */
+  font-weight: 600; /* Made slightly bolder */
+}
+
+.modal-footer button.btn-primary:hover {
+  background-color: #0356c3; /* Darker solid background on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(6, 95, 212, 0.3);
+}
+
+/* Skeletons with enhanced animation */
+.skeleton-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.skeleton-title {
+  height: 24px;
+  margin-bottom: 12px;
+  width: 70%;
+}
+
+.skeleton-description {
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.skeleton-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.skeleton-comment {
+  height: 16px;
+  flex: 1;
+}
+
+.skeleton-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Custom fix for progress percentage text */
+.watch-lecture-container .progress {
+  position: relative;
+}
+
+.watch-lecture-container .progress span {
+  position: absolute;
+  right: 5px;
+  top: -18px;
+  font-size: 12px;
+  color: #333; /* Darker text for better visibility */
+  background-color: rgba(255, 255, 255, 0.9); /* More opaque background */
+  padding: 2px 5px;
+  border-radius: 2px;
+  font-weight: 500; /* Slightly bolder */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .video-wrapper {
+    padding-top: 56.25%;
+  }
+  
+  .upcoming-lectures {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .watch-lecture-container {
+    padding: 10px;
+  }
+  
+  .video-title {
+    font-size: 16px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .button-group button {
+    width: 100%;
+  }
+}

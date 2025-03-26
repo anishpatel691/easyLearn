@@ -1,0 +1,294 @@
+/* AboutUs.css */
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .about-us-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f5f9ff;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .about-us-hero h1 {
+    font-size: 2.5rem;
+    color: #2c4c8c;
+    margin-bottom: 15px;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    color: #5d7bb0;
+    font-style: italic;
+  }
+  
+  /* Mission Section */
+  .about-us-mission {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+  }
+  
+  .mission-content {
+    flex: 1;
+  }
+  
+  .mission-image {
+    flex: 1;
+  }
+  
+  .mission-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Headings */
+  section h2 {
+    color: #2c4c8c;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #7ba0e1;
+  }
+  
+  /* Values Section */
+  .about-us-values {
+    margin-bottom: 60px;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  .value-card {
+    background-color: #f8faff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .value-card h3 {
+    color: #4270b4;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  
+  /* Team Section */
+  .about-us-team {
+    margin-bottom: 60px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .team-member-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-member-image {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f5ff;
+  }
+  
+  .team-member-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 5px solid white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member-card h3 {
+    text-align: center;
+    margin: 20px 0 5px;
+    color: #2c4c8c;
+  }
+  
+  .team-member-role, .team-member-specialty {
+    text-align: center;
+    margin: 5px 0;
+    color: #5d7bb0;
+  }
+  
+  .team-member-specialty {
+    font-style: italic;
+  }
+  
+  .team-member-bio {
+    padding: 0 20px 20px;
+    text-align: center;
+  }
+  
+  .loading-message, .error-message {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .error-message {
+    color: #d9534f;
+  }
+  
+  /* Timeline Section */
+  .about-us-history {
+    margin-bottom: 60px;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #b8ceed;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-year {
+    position: absolute;
+    left: -30px;
+    background-color: #4270b4;
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  
+  .timeline-year::after {
+    content: attr(class);
+    position: absolute;
+    left: 25px;
+    font-weight: bold;
+    color: #4270b4;
+  }
+  
+  .timeline-content {
+    padding-left: 20px;
+  }
+  
+  .timeline-content h3 {
+    color: #4270b4;
+    margin-bottom: 5px;
+  }
+  
+  /* Testimonials Section */
+  .about-us-testimonials {
+    background-color: #f5f9ff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+  }
+  
+  .testimonial {
+    text-align: center;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .testimonial p {
+    font-size: 1.1rem;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    color: #4270b4;
+    margin-top: 15px;
+  }
+  
+  /* Contact Section */
+  .about-us-contact {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .contact-button {
+    background-color: #4270b4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .contact-button:hover {
+    background-color: #325a96;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .about-us-mission {
+      flex-direction: column;
+    }
+    
+    .timeline-year::after {
+      font-size: 0.7rem;
+    }
+    
+    .about-us-hero {
+      padding: 40px 20px;
+    }
+    
+    .about-us-hero h1 {
+      font-size: 2rem;
+    }
+  }

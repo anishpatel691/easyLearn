@@ -1,0 +1,189 @@
+/* StudentManagement.css */
+:root {
+    --primary-color: #3a6ea5;
+    --secondary-color: #2c5698;
+    --background-light: #f4f7fa;
+    --text-dark: #2c3e50;
+    --border-color: #e0e6ed;
+    --hover-color: #f0f4f8;
+  }
+  
+  .student-management-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .loading, .error, .no-students {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .loading {
+    color: var(--primary-color);
+    background-color: rgba(58, 110, 165, 0.1);
+    border: 1px solid rgba(58, 110, 165, 0.2);
+  }
+  
+  .error {
+    color: #d9534f;
+    background-color: rgba(217, 83, 79, 0.1);
+    border: 1px solid rgba(217, 83, 79, 0.2);
+  }
+  
+  .no-students {
+    color: #f0ad4e;
+    background-color: rgba(240, 173, 78, 0.1);
+    border: 1px solid rgba(240, 173, 78, 0.2);
+  }
+  
+  .student-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-table thead {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .student-table th, .student-table td {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  .student-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+  }
+  
+  .student-table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .student-table tbody tr:nth-child(even) {
+    background-color: var(--hover-color);
+  }
+  
+  .student-table tbody tr:hover {
+    background-color: rgba(58, 110, 165, 0.05);
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .status-active {
+    background-color: #e6f3e6;
+    color: #2c7f2c;
+    border: 1px solid #c4e6c4;
+  }
+  
+  .status-inactive {
+    background-color: #f9e6e6;
+    color: #a32b2b;
+    border: 1px solid #f0c5c5;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .student-management-container {
+      padding: 10px;
+    }
+  
+    .student-table,
+    .student-table tbody,
+    .student-table tr,
+    .student-table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .student-table thead {
+      display: none;
+    }
+  
+    .student-table tr {
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+  
+    .student-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px;
+    }
+  
+    .student-table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: var(--text-dark);
+      opacity: 0.7;
+      margin-right: 10px;
+    }
+  }
+  
+  /* Additional Enhancements */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-light: #1a2138;
+      --text-dark: #e0e6ed;
+      --border-color: #354055;
+    }
+  
+    .student-management-container {
+      background-color: #111827;
+    }
+  
+    .student-table {
+      background-color: #1f2937;
+    }
+  
+    .student-table th {
+      background-color: #374151;
+    }
+  
+    .student-table tbody tr:nth-child(even) {
+      background-color: #111827;
+    }
+  
+    .student-table tbody tr:hover {
+      background-color: rgba(58, 110, 165, 0.2);
+    }
+  }
