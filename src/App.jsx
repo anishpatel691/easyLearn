@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from '../componet/homepage/Home';
-import CoursesPage from '../componet/courrse/Course';
 import LeftSidebarNavbar from '../componet/navbar/navbar';
 import LoginRegister from '../componet/LogRegister/LoginRegister';
 import Loginstatus from './Loginstatus';
 import Notification from '../componet/notification/Notification';
 import SomeOtherComponent from './Log';
-import CourseDetailsPage from '../componet/coursedetails/CourseDetailsPage';
 import CourseVideoPage from '../componet/CourseVideoPage/CourseVideoPage';
 import { useUser } from '../context/authContaxt';
 import StudentDashboard from '../componet/students/dasbord/Dashboard';
