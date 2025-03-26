@@ -6,7 +6,6 @@ import LoginRegister from '../componet/LogRegister/LoginRegister';
 import Loginstatus from './Loginstatus';
 import Notification from '../componet/notification/Notification';
 import SomeOtherComponent from './Log';
-import CourseVideoPage from '../componet/CourseVideoPage/CourseVideoPage';
 import { useUser } from '../context/authContaxt';
 import StudentDashboard from '../componet/students/dasbord/Dashboard';
 import InstructorDashboard from '../componet/instructer/instructDeshbord/Deshbord';
@@ -16,8 +15,6 @@ import StudentCorner from '../componet/students/Studentcourner/StudentCorner';
 import ViewCourse from '../componet/students/viewcourse/ViewCourse';
 import WatchLecture from '../componet/students/watchlectures/WatchLecture';
 import ForgotPassword from '../componet/forgetpassword/ForgotPassword';
-import PaymentIntegration from '../componet/instructer/PaymentDemo';
-import PaymentInterface from '../componet/instructer/PaymentInterface';
 import StudentLeftSidebar from '../componet/students/StudentNavbar';
 import UserProfile from '../componet/students/StudentSettings';
 import AboutUs from '../componet/aboutUs/AboutUs';
@@ -55,10 +52,7 @@ const App = () => {
           <Route path="/login" element={<LoginRegister />} />
           <Route path="/logins" element={<Loginstatus />} />
           <Route path="/l" element={<SomeOtherComponent />} />
-          <Route path="/coursevi" element={<CourseVideoPage />} />
           <Route path="/forgetpasssentotp" element={<ForgotPassword />} />
-          <Route path="/py" element={<PaymentIntegration/>} />
-          <Route path="/payment-interface" element={<PaymentInterface />} />
           <Route path="/instructor/managecourses" element={<CourseManagement />} />
           <Route path="/instructor/manage-courses" element={<UploadCourse />} />
           <Route path='/instructor/add_lecture' element={<UploadLecture/>}/>
